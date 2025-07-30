@@ -1,0 +1,125 @@
+*{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+  background: #fff;
+  box-shadow: 0 2px 6px #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #333;
+  user-select: none;
+}
+
+/* Navigation */
+header nav {
+  display: flex;
+  gap: 28px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  font-size: 1em;
+  transition: color 0.2s;
+  padding: 6px 0;
+  position: relative;
+}
+
+/* Hover and Active Link Styles */
+header nav a:hover,
+header nav a.active {
+  color: #a37ba7;
+  font-weight: 600;
+}
+
+/* Optional: Underline effect for active link */
+header nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #a37ba7;
+  border-radius: 2px;
+}
+
+/* Responsive: Stack nav for small screens */
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+    padding: 20px 5%;
+  }
+  header nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+    gap: 20px;
+  }
+}
+
+
+/* Adjust hero section style to match index.html */
+.hero {
+  text-align: center;
+  padding: 80px 10px 60px;
+  background: linear-gradient(to bottom right, #fff6fb 60%, #f4f8fc 100%);
+  color: #333;
+}
+
+/* Active navigation link highlight */
+nav a.active {
+  color: #a37ba7;
+  font-weight: bold;
+}
+
+/* About and accessories product list adjustments */
+.about, #accessories {
+  padding: 40px 10%;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+#accessories .product-list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+#accessories .product-card {
+  width: 260px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 22px #eee;
+  text-align: center;
+  padding: 18px;
+  transition: transform 0.2s;
+}
+
+#accessories .product-card:hover {
+  transform: translateY(-7px) scale(1.03);
+}
+
+#accessories .product-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}

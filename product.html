@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Accessory Haven | Electronic Devices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="product.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Accessory Haven</div>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./product.html">Products</a>
+      <!-- <a href="product.html" class="active">Electronics</a> -->
+      <a href="./cart.html">cart</a>
+      <a href="home.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" style="padding: 60px 10px 40px;">
+    <h1 style="text-align: center;">Electronic Devices</h1>
+    <p style="text-align: center; max-width: 600px; margin: 0 auto;">
+      Explore our range of high-quality electronic accessories and devices including headphones, earbuds, and mobile phones.
+    </p>
+  </section>
+
+  <section id="electronics" class="products" style="padding: 40px 5%;">
+    <h2 style="text-align: center; margin-bottom: 35px;">Featured Electronic Devices</h2>
+    
+    <div class="product-list" style="justify-content: center; gap: 30px; flex-wrap: wrap;">
+      
+      <!-- Headphones -->
+      <div class="product-card" name="Wireless Headphones" data-price="6999" >
+        <img src="./WL_headphone.jpeg" alt="Wireless Headphones" />
+        <h3>Wireless Headphones</h3>
+        <p>₹2,799</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Earbuds -->
+      <div class="product-card" data-name="Wireless Earbuds" data-price="3499" >
+        <img src="./WL_ebs.jpeg" alt="Wireless Earbuds" />
+        <h3>Leaf Wireless Earbuds</h3>
+        <p>₹1,459</p>
+        
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Smartphone Android -->
+      <div class="product-card" data-name="Android" data-price="15999" >
+        <img src="./galaxy_phone.jpeg" alt="Galaxy Model S25" />
+        <h3>Galaxy Model Samsung S25</h3>
+        <p>₹85,999</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Smartphone 2 -->
+      <div class="product-card" data-name="macbook" data-price="152499" >
+        <img src="./macbook.jpeg" alt="Macbook" />
+        <h3>Apple macbook M3 edition </h3>
+        <p>₹1,52,499</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Portable Speaker -->
+      <div class="product-card" data-name="Portable Bluetooth Speaker" data-price="1,49,999" >
+        <img src="./gmg_laptops.jpeg" alt="Portable Bluetooth Speaker" />
+        <h3>ROG zypherus Gaming laptops</h3>
+        <p>₹1,49,499</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p style="text-align: center;">&copy; 2025 Accessory Haven</p>
+  </footer>
+
+  <script src="cart.js"></script>
+  <script>
+    // Smooth scroll navigation for internal links (if any)
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const section = document.querySelector(href);
+          if (section) section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Add to cart function on buttons
+    document.querySelectorAll('.product-card button').forEach(button => {
+      button.addEventListener('click', function () {
+        const card = this.closest('.product-card');
+        const product = {
+          id: card.dataset.name.toLowerCase().replace(/\s+/g, '-'),
+          name: card.dataset.name,
+          price: Number(card.dataset.price),
+          image: card.dataset.image,
+          quantity: 1,
+        };
+        addToCart(product);
+        
+        // Notification
+        const notice = document.createElement('div');
+        notice.textContent = `'${product.name}' added to cart!`;
+        notice.style.position = 'fixed';
+        notice.style.bottom = '30px';
+        notice.style.right = '30px';
+        notice.style.background = '#a37ba7';
+        notice.style.color = '#fff';
+        notice.style.padding = '12px 25px';
+        notice.style.borderRadius = '20px';
+        notice.style.boxShadow = '0 4px 12px #ccc';
+        notice.style.zIndex = '99';
+        document.body.appendChild(notice);
+        setTimeout(() => notice.remove(), 1500);
+      });
+    });
+  </script>
+</body>
+</html>
