@@ -2,128 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Accessory Haven | Electronic Devices</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ElectronicsBazzar | Home</title>
-  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="product.css" />
 </head>
 <body>
   <header>
-    <div class="logo">ElectronicsBazzar</div>
+    <div class="logo">Accessory Haven</div>
     <nav>
-      <a href="./index.html" class="active">Home</a>
+      <a href="./index.html">Home</a>
       <a href="./product.html">Products</a>
+      <!-- <a href="product.html" class="active">Electronics</a> -->
       <a href="./cart.html">cart</a>
-      <a href="#contact">Contact</a>
+      <a href="home.html#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Welcome to ElectronicsBazzar</h1>
-    <p>Your one-stop destination for trendy and quality accessories.</p>
-  </section>
-
-  <section class="about" style="padding: 50px 10%; max-width: 900px; margin: auto;">
-    <h2>What is ElectronicsBazzar?</h2>
-    <p>
-      ElectronicsBazzar is an online store dedicated to curating stylish, unique, and
-      high-quality accessories that complement your personal style. Whether you're
-      looking to upgrade your everyday look or find a special gift, we provide a
-      diverse collection that fits every taste and occasion.
+  <section class="hero" style="padding: 60px 10px 40px;">
+    <h1 style="text-align: center;">Electronic Devices</h1>
+    <p style="text-align: center; max-width: 600px; margin: 0 auto;">
+      Explore our range of high-quality electronic accessories and devices including headphones, earbuds, and mobile phones.
     </p>
   </section>
 
-  <section id="accessories" class="products" style="padding: 40px 5%;">
-    <h2>Types of Accessories We Offer</h2>
-    <div class="product-list" style="justify-content: flex-start; gap: 25px;">
-
-<div class="product-card" style="width: 260px;">
-        <img src="./headEars.jpeg" alt="Earphones & Headphones" />
-        <h3>Headphones & earbuds</h3>
-        <p>Earbuds, Headphones & Portable Audio Gear</p>
-      </div>
-
-      <div class="product-card" style="width: 260px;">
-        <img src="./galaxy_phone.jpeg" alt="smartphones" />
-        <h3>Watches</h3>
-        <p>A wide varitey of smartphones with unique features</p>
-      </div>
-
-      <div class="product-card" style="width: 260px;">
-        <img src="./macbook.jpeg" alt="macbooks" />
-        <h3>Macbooks</h3>
-        <p>MacBooks with advanced technology and security</p>
-      </div>
-
-      <div class="product-card" style="width: 260px;">
-        <img src="./gmg_laptops.jpeg" alt="Gaming laptops" />
-        <h3>Gaming laptops</h3>
-        <p>Gaming laptops woth high performing and secure technology</p>
-      </div>
+  <section id="electronics" class="products" style="padding: 40px 5%;">
+    <h2 style="text-align: center; margin-bottom: 35px;">Featured Electronic Devices</h2>
+    
+    <div class="product-list" style="justify-content: center; gap: 30px; flex-wrap: wrap;">
       
-    </div>
-  </section>
+      <!-- Headphones -->
+      <div class="product-card" name="Wireless Headphones" data-price="6999" >
+        <img src="./WL_headphone.jpeg" alt="Wireless Headphones" />
+        <h3>Wireless Headphones</h3>
+        <p>₹2,799</p>
+        <button>Add to Cart</button>
+      </div>
 
+      <!-- Earbuds -->
+      <div class="product-card" data-name="Wireless Earbuds" data-price="3499" >
+        <img src="./WL_ebs.jpeg" alt="Wireless Earbuds" />
+        <h3>Leaf Wireless Earbuds</h3>
+        <p>₹1,459</p>
+        
+        <button>Add to Cart</button>
+      </div>
 
-<section class="why-choose-us" style="padding: 45px 10%; text-align: center;">
-  <h2>Why Choose ElectronicsBazzar?</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 900px; margin: 0 auto;">
-    <div style="background: #fff; border-radius: 15px; box-shadow: 0 4px 22px #eee; padding: 24px 18px; max-width: 280px;">
-      <h3 style="color: #a37ba7;">Curated Selection</h3>
-      <p>Handpicked, trendy accessories that blend quality and style.</p>
-    </div>
-    <div style="background: #fff; border-radius: 15px; box-shadow: 0 4px 22px #eee; padding: 24px 18px; max-width: 280px;">
-      <h3 style="color: #a37ba7;">Trusted Quality</h3>
-      <p>Every item is checked for durability and crafted to last.</p>
-    </div>
-    <div style="background: #fff; border-radius: 15px; box-shadow: 0 4px 22px #eee; padding: 24px 18px; max-width: 280px;">
-      <h3 style="color: #a37ba7;">Secure Shopping</h3>
-      <p>Shop with confidence with safe payments and privacy protection.</p>
-    </div>
-    <div style="background: #fff; border-radius: 15px; box-shadow: 0 4px 22px #eee; padding: 24px 18px; max-width: 280px;">
-      <h3 style="color: #a37ba7;">Fast Delivery</h3>
-      <p>Get your favorite accessories delivered quickly to your doorstep.</p>
-    </div>
-  </div>
-</section>
+      <!-- Smartphone Android -->
+      <div class="product-card" data-name="Android" data-price="15999" >
+        <img src="./galaxy_phone.jpeg" alt="Galaxy Model S25" />
+        <h3>Galaxy Model Samsung S25</h3>
+        <p>₹85,999</p>
+        <button>Add to Cart</button>
+      </div>
 
+      <!-- Smartphone 2 -->
+      <div class="product-card" data-name="macbook" data-price="152499" >
+        <img src="./macbook.jpeg" alt="Macbook" />
+        <h3>Apple macbook M3 edition </h3>
+        <p>₹1,52,499</p>
+        <button>Add to Cart</button>
+      </div>
 
-
-  <section id="contact" class="contact" style="padding: 40px 10%; text-align: center;">
-    <h2>Contact Us</h2>
-    <p>Have questions? Reach out at <a href="mailto:info@ElectronicsBazzar.com">info@ElectronicsBazzar.com</a></p>
+      <!-- Portable Speaker -->
+      <div class="product-card" data-name="Portable Bluetooth Speaker" data-price="1,49,999" >
+        <img src="./gmg_laptops.jpeg" alt="Portable Bluetooth Speaker" />
+        <h3>ROG zypherus Gaming laptops</h3>
+        <p>₹1,49,499</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 ElectronicsBazzar</p>
+    <p style="text-align: center;">&copy; 2025 ElectronicsBazzar</p>
   </footer>
 
-<script>
-  // Smooth scroll navigation
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href.startsWith('#')) {
-        e.preventDefault();
-        const section = document.querySelector(href);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
+  <script src="cart.js"></script>
+  <script>
+    // Smooth scroll navigation for internal links (if any)
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const section = document.querySelector(href);
+          if (section) section.scrollIntoView({ behavior: 'smooth' });
         }
-      }
+      });
     });
-  });
 
-  // Product image hover effect for accessories product cards
-  document.querySelectorAll('#accessories .product-card img').forEach(img => {
-    img.addEventListener('mouseenter', () => {
-      img.style.transform = 'scale(1.08)';
-      img.style.transition = 'transform 0.2s';
+    // Add to cart function on buttons
+    document.querySelectorAll('.product-card button').forEach(button => {
+      button.addEventListener('click', function () {
+        const card = this.closest('.product-card');
+        const product = {
+          id: card.dataset.name.toLowerCase().replace(/\s+/g, '-'),
+          name: card.dataset.name,
+          price: Number(card.dataset.price),
+          image: card.dataset.image,
+          quantity: 1,
+        };
+        addToCart(product);
+        
+        // Notification
+        const notice = document.createElement('div');
+        notice.textContent = `'${product.name}' added to cart!`;
+        notice.style.position = 'fixed';
+        notice.style.bottom = '30px';
+        notice.style.right = '30px';
+        notice.style.background = '#a37ba7';
+        notice.style.color = '#fff';
+        notice.style.padding = '12px 25px';
+        notice.style.borderRadius = '20px';
+        notice.style.boxShadow = '0 4px 12px #ccc';
+        notice.style.zIndex = '99';
+        document.body.appendChild(notice);
+        setTimeout(() => notice.remove(), 1500);
+      });
     });
-    img.addEventListener('mouseleave', () => {
-      img.style.transform = 'scale(1)';
-    });
-  });
-</script>
-
-
+  </script>
 </body>
 </html>
