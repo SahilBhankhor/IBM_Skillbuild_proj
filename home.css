@@ -89,21 +89,21 @@ nav a.active {
 }
 
 /* About and accessories product list adjustments */
-.about, #accessories {
+.about, #Electronics {
   padding: 40px 10%;
   max-width: 900px;
   margin: auto;
   text-align: center;
 }
 
-#accessories .product-list {
+#Electronics .product-list {
   display: flex;
   justify-content: flex-start;
   gap: 25px;
-  flex-wrap: wrap;
+  flex-wrap: wrap ;
 }
 
-#accessories .product-card {
+#Electronics .product-card {
   width: 260px;
   background: #fff;
   border-radius: 15px;
@@ -113,13 +113,52 @@ nav a.active {
   transition: transform 0.2s;
 }
 
-#accessories .product-card:hover {
+#Electronics .product-card:hover {
   transform: translateY(-7px) scale(1.03);
 }
 
-#accessories .product-card img {
+#Electronics .product-card img {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+/* Base: Mobile defaults (already present) */
+/* ...existing styles... */
+
+/* Tablet screens (601px–900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  #Electronics .product-list {
+    justify-content: center;
+    gap: 22px;
+  }
+  #Electronics .product-card {
+    width: 47%;  /* 2 cards/row with gap */
+    margin-bottom: 22px;
+  }
+}
+
+/* Laptops and medium screens (901px–1300px) */
+@media (min-width: 901px) and (max-width: 1300px) {
+  #Electronics .product-list {
+    justify-content: flex-start;
+    gap: 24px;
+  }
+  #Electronics .product-card {
+    width: 31%;  /* 3 cards/row with gap */
+    margin-bottom: 24px;
+  }
+}
+
+/* Large screens and desktops (1301px and above) */
+@media (min-width: 1301px) {
+  #Electronics .product-list {
+    justify-content: flex-start;
+    gap: 28px;
+  }
+  #Electronics .product-card {
+    width: 23%;  /* 4 cards/row, feel free to tweak to fit design */
+    margin-bottom: 28px;
+  }
 }
